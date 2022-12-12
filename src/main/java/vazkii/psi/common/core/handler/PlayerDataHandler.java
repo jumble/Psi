@@ -256,7 +256,7 @@ public class PlayerDataHandler {
 		private static final String TAG_CUSTOM_DATA = "customData";
 		
 		//Increased the amount of total Psi
-		public int totalPsi = 50000;
+		public int totalPsi = 30000;
 		public int regen = 300;
 		
 		public int level;

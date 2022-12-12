@@ -49,23 +49,23 @@ public class ItemCADAssembly extends ItemCADComponent implements ICADAssembly, I
 
 		// Iron
 		addStat(EnumCADStat.EFFICIENCY, 0, 70);
-		addStat(EnumCADStat.POTENCY, 0, 1000);
+		addStat(EnumCADStat.POTENCY, 0, 500);
 
 		// Gold
 		addStat(EnumCADStat.EFFICIENCY, 1, 65);
-		addStat(EnumCADStat.POTENCY, 1, 1500);
+		addStat(EnumCADStat.POTENCY, 1, 750);
 
 		// Psimetal
 		addStat(EnumCADStat.EFFICIENCY, 2, 80);
-		addStat(EnumCADStat.POTENCY, 2, 2500);
+		addStat(EnumCADStat.POTENCY, 2, 1250);
 
 		// Ebony Psimetal
 		addStat(EnumCADStat.EFFICIENCY, 3, 85);
-		addStat(EnumCADStat.POTENCY, 3, 4200);
+		addStat(EnumCADStat.POTENCY, 3, 2100);
 
 		// Ivory Psimetal
 		addStat(EnumCADStat.EFFICIENCY, 4, 95);
-		addStat(EnumCADStat.POTENCY, 4, 3200);
+		addStat(EnumCADStat.POTENCY, 4, 1600);
 
 		// Creative
 		addStat(EnumCADStat.EFFICIENCY, 5, -1);
