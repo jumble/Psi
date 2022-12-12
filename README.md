@@ -1,3 +1,5 @@
+Fork with balance tweaks and bugfixes for Psi by Vazkii
+
 # Psi
 Magic?? Tech??
 

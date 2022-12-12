@@ -30,13 +30,13 @@ public class ItemCADBattery extends ItemCADComponent {
 	@Override
 	public void registerStats() {
 		// Basic
-		addStat(EnumCADStat.OVERFLOW, 0, 100);
+		addStat(EnumCADStat.OVERFLOW, 0, 400);
 
 		// Extended
-		addStat(EnumCADStat.OVERFLOW, 1, 200);
+		addStat(EnumCADStat.OVERFLOW, 1, 800);
 
 		// Ultradense
-		addStat(EnumCADStat.OVERFLOW, 2, 400);
+		addStat(EnumCADStat.OVERFLOW, 2, 1600);
 	}
 
 	@Override
