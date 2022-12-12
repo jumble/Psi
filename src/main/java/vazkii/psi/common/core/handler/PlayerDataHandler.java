@@ -257,7 +257,7 @@ public class PlayerDataHandler {
 		
 		//Increased the amount of total Psi
 		public int totalPsi = 30000;
-		public int regen = 300;
+		public int regen = 250;
 		
 		public int level;
 		public int availablePsi;

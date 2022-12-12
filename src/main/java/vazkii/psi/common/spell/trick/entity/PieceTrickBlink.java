@@ -11,8 +11,12 @@
 package vazkii.psi.common.spell.trick.entity;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.potion.Potion;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.init.MobEffects;
 import vazkii.arl.network.NetworkHandler;
 import vazkii.psi.api.spell.EnumSpellStat;
 import vazkii.psi.api.spell.Spell;
@@ -73,6 +77,13 @@ public class PieceTrickBlink extends PieceTrick {
 		double offY = Math.max(0, look.y * dist);
 		double offZ = look.z * dist;
 
+		//Prevent blinking when under ender inhibition
+		if(e instanceof EntityPlayerMP){
+			EntityPlayerMP player = (EntityPlayerMP) e;
+			if(player.isPotionActive(Potion.getPotionFromResourceLocation("witchery:ender_inhibition")))
+				throw new SpellRuntimeException(SpellRuntimeException.BOSS_IMMUNE);
+		}
+		
 		e.setPosition(e.posX + offX, e.posY + offY, e.posZ + offZ);
 		if (e instanceof EntityPlayerMP)
 			NetworkHandler.INSTANCE.sendTo(new MessageBlink(offX, offY, offZ), (EntityPlayerMP) e);

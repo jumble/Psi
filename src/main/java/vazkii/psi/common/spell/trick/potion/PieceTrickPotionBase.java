@@ -73,7 +73,7 @@ public abstract class PieceTrickPotionBase extends PieceTrick {
 			powerVal = this.<Double>getParamValue(context, power);
 		Double timeVal = this.<Double>getParamValue(context, time);
 
-		//Set the max effect level to 4 for PSI potion effects
+		//Set the max effect level to 5 for PSI potion effects
 		((EntityLivingBase) targetVal).addPotionEffect(new PotionEffect(getPotion(), Math.max(1, timeVal.intValue()) * 20, hasPower() ? Math.min(powerVal.intValue() - 1, 4) : 0));
 
 		return null;
